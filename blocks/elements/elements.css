@@ -3,4 +3,16 @@
     grid-template-columns: repeat(auto-fill, 282px);
     gap: 20px;
     padding: 11.25% 5.9375% 0;
+    justify-content: center;
 }
+
+@media (min-width: 768px) {
+    .elements {
+        column-gap: 17px;
+        row-gap: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 51px;
+    }
+}
+

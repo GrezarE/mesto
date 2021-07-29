@@ -8,3 +8,12 @@
     grid-column-start: 1;
     grid-column-end: 3;
 }
+
+@media (min-width: 1280px) {
+    .profile__text {
+        font-size: 18px;
+        line-height: 1;
+        padding-top: 16px;
+        text-align: start;
+    }
+}

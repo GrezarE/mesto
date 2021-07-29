@@ -1,7 +1,31 @@
 .page {
-    max-width: 1280px;
+    max-width: 1178px;
     margin: 0 auto;
     font-family: 'Inter', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .page {
+        margin-left: 12.1745%;
+        margin-right: 12.1745%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page {
+        margin-left: 7.03125%;
+        margin-right: 7.03125%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .page {
+        margin-left: 15.625%;
+        margin-right: 15.625%;
+        width: calc(100% - 31.25%);
+    }
 }

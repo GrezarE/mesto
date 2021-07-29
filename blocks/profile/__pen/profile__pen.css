@@ -5,3 +5,11 @@
     box-sizing: border-box;
     align-self: center;
 }
+
+@media (min-width: 1280px) {
+    .profile__pen {
+        width: 10px;
+        height: 10px;
+        margin: 7px;
+    }
+}

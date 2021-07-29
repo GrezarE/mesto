@@ -1,8 +1,17 @@
 .header__logo {
     width: 103.74PX;
     height: 24.4px;
-    margin: 0 189.26px 0 27px;
+    margin: 28px 189.26px 0 27px;
     background-image: url('../../../images/Vector.svg');
     background-size: cover;
     box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
+    .header__logo {
+        width: 142px;
+        height: 33px;
+        margin-top: 45px;
+        margin-left: 0;
+    }
 }

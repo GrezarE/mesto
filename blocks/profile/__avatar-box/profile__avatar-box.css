@@ -1,8 +1,20 @@
 .profile__avatar-box {
-    width: 168.75px;
-    height: 127.5px;
-    display: grid;
-    justify-self: center;
-    padding-left: 59.5px;
-    padding-right: 53.75px;
+    width: 120px;
+    height: 120px;
+    /* display: grid;
+    justify-self: center; */
+    margin-left: 101px;
+    margin-right: 99px;
+    background-image: url(../../../images/custo.jpg);
+    background-size: 120px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    align-self: center;
+}
+
+@media (min-width: 1280px) {
+    .profile__avatar-box {
+        margin-left: 0;
+        margin-right: 30px;
+    }
 }

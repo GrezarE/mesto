@@ -1,5 +1,13 @@
 .profile__info {
     display: grid;
-    padding-top: 22.25px;
+    padding-top: 25px;
     padding-bottom: 33px;
+}
+
+@media (min-width: 1280px) {
+    .profile__info {
+        padding-top: 22px;
+        padding-bottom: 25px;
+        margin-right: 244px;
+    }
 }
