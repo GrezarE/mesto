@@ -1,8 +1,6 @@
 .profile__avatar-box {
     width: 120px;
     height: 120px;
-    /* display: grid;
-    justify-self: center; */
     margin-left: 101px;
     margin-right: 99px;
     background-image: url(../../../images/custo.jpg);
@@ -12,7 +10,7 @@
     align-self: center;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     .profile__avatar-box {
         margin-left: 0;
         margin-right: 30px;

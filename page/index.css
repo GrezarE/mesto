@@ -15,19 +15,15 @@
 @import url(../blocks/popup/__button/popup__button.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__avatar-box/profile__avatar-box.css);
-/* @import url(../blocks/profile/__avatar/profile__avatar.css); */
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/profile/__edit/profile__edit.css);
 @import url(../blocks/profile/__pen/profile__pen.css);
 @import url(../blocks/profile/__title/profile__title.css);
 @import url(../blocks/profile/__text/profile__text.css);
 @import url(../blocks/profile/__button/profile__button.css);
-@import url(../blocks/profile/__plus/profile__plus.css);
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__image/element__image.css);
-/* @import url(../blocks/element/__group/element__group.css); */
-
 @import url(../blocks/element/__text/element__text.css);
 @import url(../blocks/element/__hearth/element__hearth.css);
 @import url(../blocks/element/__hearth/_disabled/element__hearth_disabled.css);

@@ -3,10 +3,26 @@
     height: 20px;
     position: relative;
     z-index: 1;
-    margin: 87px 19px 16px 281px;
+    margin: 87px 5.9375% 16px 281px;
     transition: 1s;
+    align-self: flex-end;
 }
 
 .popup__close:hover {
     opacity: 0.6;
+}
+
+@media (min-width: 488px) {
+    .popup__close {
+        margin-bottom: 8px;
+        margin-right: 0;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .popup__close {
+        margin-right: 5.9375%;
+    }
 }
