@@ -1,0 +1,6 @@
+.elements {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 282px);
+    gap: 20px;
+    padding: 11.25% 5.9375% 0;
+}

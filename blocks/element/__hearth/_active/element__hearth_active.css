@@ -1,0 +1,5 @@
+.element__hearth_active {
+    background-image: url(../../../../images/hearth-active.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

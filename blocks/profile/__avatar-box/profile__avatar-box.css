@@ -1,0 +1,8 @@
+.profile__avatar-box {
+    width: 168.75px;
+    height: 127.5px;
+    display: grid;
+    justify-self: center;
+    padding-left: 59.5px;
+    padding-right: 53.75px;
+}

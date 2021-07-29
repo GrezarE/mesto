@@ -1,0 +1,7 @@
+.profile__pen {
+    width: 7.5px;
+    height: 7.5px;
+    margin: 4.5px;
+    box-sizing: border-box;
+    align-self: center;
+}

@@ -1,0 +1,10 @@
+.element__hearth_disabled {
+    background-image: url(../../../../images/hearth-disabled.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 1s;
+}
+
+.element__hearth_disabled:hover {
+    opacity: 0.5;
+}

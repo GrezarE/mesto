@@ -1,0 +1,8 @@
+.profile {
+    color: #fff;
+    padding-top: 38.25px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(16px, 200px)); */
+}

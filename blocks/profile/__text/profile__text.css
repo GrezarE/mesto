@@ -1,0 +1,10 @@
+.profile__text {
+    font-size: 14px;
+    line-height: 1.2143;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    padding-top: 7px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}

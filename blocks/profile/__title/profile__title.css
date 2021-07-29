@@ -1,0 +1,14 @@
+.profile__title {
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 1.223;
+    text-align: center;
+    margin: 0;
+    padding-left: 37px;
+    align-self: center;
+    white-space: nowrap;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+
+}
