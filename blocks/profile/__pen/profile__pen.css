@@ -1,15 +1,15 @@
 .profile__pen {
-    width: 7.5px;
-    height: 7.5px;
-    margin: 4.5px;
-    box-sizing: border-box;
-    align-self: center;
+  width: 7.5px;
+  height: 7.5px;
+  margin: 4.5px;
+  box-sizing: border-box;
+  align-self: center;
 }
 
 @media (min-width: 1024px) {
-    .profile__pen {
-        width: 10px;
-        height: 10px;
-        margin: 7px;
-    }
+  .profile__pen {
+    width: 10px;
+    height: 10px;
+    margin: 7px;
+  }
 }

@@ -1,13 +1,13 @@
 .footer__copyright {
-    margin: 0;
-    font-size: 14px;
-    line-height: 1.215;
-    font-weight: normal;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.215;
+  font-weight: normal;
 }
 
 @media (min-width: 768px) {
-    .footer__copyright {
-        font-size: 18px;
-        line-height: 1.2223;
-    }
+  .footer__copyright {
+    font-size: 18px;
+    line-height: 1.2223;
+  }
 }

@@ -1,8 +1,19 @@
 .element__hearth {
-    width: 22px;
-    height: 19px;
-    margin-right: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    justify-self: end;
+  border: 0;
+  width: 22px;
+  height: 19px;
+  margin-right: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-self: end;
+  background-color: #fff;
+  background-image: url(../../../images/hearth-disabled.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+}
+
+.element__hearth:hover {
+  opacity: 0.5;
+  cursor: pointer;
 }

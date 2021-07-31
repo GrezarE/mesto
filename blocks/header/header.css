@@ -1,7 +1,15 @@
 .header {
-    width: 100%;
-    max-width: 880px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border-bottom: rgba(84, 84, 84, .7) 1px solid;
+  padding-bottom: 30.6px;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-bottom: 41px;
+  }
 }

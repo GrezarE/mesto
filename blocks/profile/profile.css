@@ -1,21 +1,20 @@
 .profile {
-    max-width: 880px;
-    margin: 0 auto;
-    color: #fff;
-    padding-top: 42px;
-    padding-left: 19px;
-    padding-right: 19px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  max-width: 880px;
+  margin: 0 auto;
+  color: #fff;
+  padding-top: 42px;
+  padding-left: 19px;
+  padding-right: 19px;
+  display: grid;
+  justify-content: center;
+  transition: 2s;
 }
 
 @media (min-width: 1024px) {
-    .profile {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
-        flex-direction: row;
-        justify-content: space-between;
-    }
+  .profile {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    grid-template-columns: 146.25px 1fr 150px;
+  }
 }

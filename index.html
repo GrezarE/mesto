@@ -11,17 +11,6 @@
 
 <body class="body">
   <div class="page">
-    <section class="popup popup_opened">
-      <img src="./images/Close-Icon.png" alt="" class="popup__close">
-      <form class="popup__box">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <fieldset class="popup__profile">
-          <input type="text" class="popup__item">
-          <input type="text" class="popup__item">
-        </fieldset>
-        <button class="popup__button">Сохранить</button>
-      </form>
-    </section>
     <header class="header">
       <div class="header__logo"></div>
       <div class="header__line"></div>
@@ -33,50 +22,62 @@
         <div class="profile__info">
           <h1 class="profile__title">Жак-Ив Кусто</h1>
           <button class="profile__edit">
-            <img src="./images/pen.svg" alt="" class="profile__pen">
+            <img src="./images/pen.svg" alt="Изменение профиля" class="profile__pen">
           </button>
           <p class="profile__text">Исследователь океана</p>
         </div>
         <button class="profile__button">
-          <img src="./images/plus.svg" class="profile__plus" alt="плюс">
         </button>
       </section>
       <section class="elements">
         <article class="element">
           <img src="./images/carachaevo.jpg" alt="Карачаево-Черкесия" class="element__image">
           <h2 class="element__text">Карачаево-Черкесия</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth element__hearth_active"></button>
         </article>
         <article class="element">
           <img src="./images/Ai-petri.jpg" alt="Ай-Петри" class="element__image">
           <h2 class="element__text">Ай-Петри</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth"></button>
         </article>
         <article class="element">
           <img src="./images/cathedral.jpg" alt="Кёнигсбергский собор" class="element__image">
           <h2 class="element__text">Кёнигсбергский собор</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth"></button>
         </article>
         <article class="element">
           <img src="./images/dombay.jpg" alt="Домбай" class="element__image">
           <h2 class="element__text">Домбай</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth"></button>
         </article>
         <article class="element">
           <img src="./images/elbrus.png" alt="Эльбрус" class="element__image">
           <h2 class="element__text">Эльбрус</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth"></button>
         </article>
         <article class="element">
           <img src="./images/geiser.jpg" alt="Долина гейзеров" class="element__image">
           <h2 class="element__text">Долина гейзеров</h2>
-          <a href="#" class="element__hearth element__hearth_disabled"></a>
+          <button class="element__hearth"></button>
         </article>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">© 2021 Mesto Russia</p>
     </footer>
+    <section class="popup ">
+      <div class="popup__form">
+        <button class="popup__close" type="button"></button>
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form class="popup__box" name="editor">
+          <fieldset class="popup__profile">
+            <input type="text" class="popup__item" name="profile-name" value="Имя профиля" placeholder="Имя профиля">
+            <input type="text" class="popup__item" name="occupation" value="Род занятий" placeholder="Род занятий">
+          </fieldset>
+          <button class="popup__button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
   </div>
 </body>
 

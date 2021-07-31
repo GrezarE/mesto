@@ -1,23 +1,25 @@
 .profile__button {
-    width: 282px;
-    height: 50px;
-    background-color: #000;
-    border: 2px solid #fff;
-    box-sizing: border-box;
-    border-radius: 2px;
-    transition: 1s;
-    align-self: center;
+  width: 282px;
+  height: 50px;
+  background-color: #000;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  transition: 1s;
+  align-self: center;
+  background-image: url(../../../images/plus.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .profile__button:hover {
-    opacity: 0.6;
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 @media (min-width: 1024px) {
-    .profile__button {
-        width: 150px;
-        height: 50px;
-        align-self: center;
-        justify-self: end;
-    }
+  .profile__button {
+    width: 150px;
+    height: 50px;
+  }
 }

@@ -1,24 +1,24 @@
 .popup__item {
-    border: 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0;
-    padding-bottom: 5px;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 26px;
-    margin: 0 22px 45px;
-    display: flex;
+  border: 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 26px;
+  margin: 0 22px 45px;
+  display: flex;
 }
 
 .popup__item:first-of-type {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 @media (min-width: 488px) {
-    .popup__item {
-        margin-bottom: 48px;
-        margin-left: 36px;
-        margin-right: 36px;
-    }
+  .popup__item {
+    margin-bottom: 48px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
 }
