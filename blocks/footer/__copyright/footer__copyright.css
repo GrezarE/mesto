@@ -5,7 +5,7 @@
   font-weight: normal;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 663px) {
   .footer__copyright {
     font-size: 18px;
     line-height: 1.2223;
