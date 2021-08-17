@@ -2,6 +2,8 @@
   display: grid;
   padding-top: 25px;
   padding-bottom: 33px;
+  grid-template-columns: 245px 1fr;
+
 }
 
 @media (min-width: 1024px) {

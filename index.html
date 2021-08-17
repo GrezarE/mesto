@@ -63,17 +63,30 @@
     <footer class="footer">
       <p class="footer__copyright">© 2021 Mesto Russia</p>
     </footer>
-    <section class="popup">
+    <section class="popup profile__popup">
       <div class="popup__form">
-        <button class="popup__close" type="button"></button>
+        <button class="popup__close profile__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__box" name="editor">
+        <form class="popup__box profile__form" name="editor">
           <fieldset class="popup__profile">
-            <input type="text" class="popup__item" name="profile-name" value="Жак-Ив Кусто" placeholder="Имя профиля">
+            <input type="text" class="popup__item" name="profile" value="Жак-Ив Кусто" placeholder="Имя профиля">
             <input type="text" class="popup__item" name="occupation" value="Исследователь океана"
               placeholder="Род занятий">
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </section>
+    <section class="popup element__popup">
+      <div class="popup__form">
+        <button class="popup__close element__close" type="button"></button>
+        <h2 class="popup__title">Новое место</h2>
+        <form class="popup__box" name="editor">
+          <fieldset class="popup__profile">
+            <input type="text" class="popup__item" name="place-name" placeholder="Название">
+            <input type="text" class="popup__item" name="image-link" placeholder="Ссылка на картинку">
+          </fieldset>
+          <button class="popup__button" type="submit">Создать</button>
         </form>
       </div>
     </section>

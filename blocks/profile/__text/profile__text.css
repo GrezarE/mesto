@@ -1,16 +1,20 @@
 .profile__text {
+  /* max-width: ; */
   font-size: 14px;
   line-height: 1.2143;
   font-weight: normal;
   text-align: center;
   margin: 0;
   padding-top: 7px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 @media (min-width: 1024px) {
   .profile__text {
+    max-width: 550px;
     font-size: 18px;
     line-height: 1;
     padding-top: 16px;
