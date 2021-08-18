@@ -1,6 +1,7 @@
 
 const content = document.querySelector('.content');
-const elements = document.querySelector('.elements')
+const elements = document.querySelector('.elements');
+const formElement = document.querySelector('.element__popup');
 
 const initialCards = [
   {
@@ -29,20 +30,34 @@ const initialCards = [
   }
 ];
 
+const elementTemplate = document.querySelector('#element-template').content;
+
 for (let i = 0; i < initialCards.length; i++) {
-  elements.insertAdjacentHTML("afterbegin",
-    `<article class="element">
-    <img src="${initialCards[i].link}" alt="${initialCards[i].name}" class="element__image">
-      <h2 class="element__text">${initialCards[i].name}</h2>
-      <button class="element__hearth" type="button"></button>
-      <button class="element__trash" type="button"></button>
-</article>`);
+
+  let cardElementStart = elementTemplate.querySelector('.element').cloneNode(true);
+
+  cardElementStart.querySelector('.element__image').src = initialCards[i].link;
+  cardElementStart.querySelector('.element__image').alt = initialCards[i].name;
+  cardElementStart.querySelector('.element__text').textContent = initialCards[i].name;
+
+  cardElementStart.querySelector('.element__hearth').addEventListener('click', function (event) {
+    const eventTargetLike = event.target;
+    eventTargetLike.classList.toggle('element__hearth_active');
+  });
+
+  cardElementStart.querySelector('.element__trash').addEventListener('click', function (evt) {
+    const eventTrash = evt.target;
+    const listItem = eventTrash.closest('.element');
+    listItem.remove();
+  });
+  elements.append(cardElementStart);
 }
+
+// Профиль
 
 const buttonProfileEdit = document.querySelector('.profile__edit');
 const popupProfile = document.querySelector('.profile__popup');
 const closeProfile = document.querySelector('.profile__close');
-
 const titleProfile = document.querySelector('.profile__title');
 const jobProfile = document.querySelector('.profile__text');
 
@@ -54,7 +69,6 @@ closeProfile.addEventListener('click', function () {
   popupProfile.classList.remove('popup_opened');
 });
 
-const formElement = document.querySelector('.element__popup');
 const profileForm = document.querySelector('.profile__form');
 const nameInput = document.querySelector('input[name="profile"]');
 const jobInput = document.querySelector('input[name="occupation"]');
@@ -69,6 +83,8 @@ closeElement.addEventListener('click', function () {
   formElement.classList.remove('popup_opened');
 });
 
+// Кнопка профиля
+
 function formSubmitHandler(evt) {
   evt.preventDefault();
   const titleProfile = document.querySelector('.profile__title');
@@ -80,29 +96,34 @@ function formSubmitHandler(evt) {
 
 profileForm.addEventListener('submit', formSubmitHandler);
 
+// Добавление карточки Элементов
 
 function addCard(evt) {
   evt.preventDefault();
+  let cardElement = elementTemplate.querySelector('.element').cloneNode(true);
+
   const placeName = document.querySelector('input[name="place-name"]')
   const imageLink = document.querySelector('input[name="image-link"]')
-  elements.insertAdjacentHTML("afterbegin",
-    `<article class="element">
-      <img src="${imageLink.value}" alt="${placeName.value}" class="element__image">
-        <h2 class="element__text">${placeName.value}</h2>
-        <button class="element__hearth" type="button"></button>
-        <button class="element__trash" type="button"></button>
-</article>`);
+
+  cardElement.querySelector('.element__image').src = imageLink.value;
+  cardElement.querySelector('.element__image').alt = placeName.value;
+  cardElement.querySelector('.element__text').textContent = placeName.value;
+
+  cardElement.querySelector('.element__hearth').addEventListener('click', function (event) {
+    const eventTargetLike = event.target;
+    eventTargetLike.classList.toggle('element__hearth_active');
+  });
+
+  cardElement.querySelector('.element__trash').addEventListener('click', function (evt) {
+    const eventTrash = evt.target;
+    const listItem = eventTrash.closest('.element');
+    listItem.remove();
+  });
+
+  elements.prepend(cardElement);
+
   formElement.classList.toggle('popup_opened');
 }
 
 formElement.addEventListener('submit', addCard);
-
-// const likeHearth = document.querySelector('.element__hearth');
-
-// console.log(likeHearth)
-
-// likeHearth.addEventListener('click', function () {
-//   likeHearth.classList.toggle('element__hearth_active')
-// })
-
 
