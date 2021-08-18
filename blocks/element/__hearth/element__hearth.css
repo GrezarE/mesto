@@ -10,7 +10,7 @@
   background-image: url(../../../images/hearth-disabled.svg);
   background-repeat: no-repeat;
   background-size: cover;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .element__hearth:hover {
