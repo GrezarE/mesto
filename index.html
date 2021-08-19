@@ -33,11 +33,11 @@
     <footer class="footer">
       <p class="footer__copyright">© 2021 Mesto Russia</p>
     </footer>
-    <section class="popup profile__popup">
+    <section class="popup popup_type_profile">
       <div class="popup__form">
-        <button class="popup__close profile__close" type="button"></button>
+        <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__box profile__form" name="editor">
+        <form class="popup__box" name="editor">
           <fieldset class="popup__profile">
             <input type="text" class="popup__item" name="profile" value="" placeholder="Имя профиля">
             <input type="text" class="popup__item" name="occupation" value="" placeholder="Род занятий">
@@ -46,9 +46,9 @@
         </form>
       </div>
     </section>
-    <section class="popup element__popup">
+    <section class="popup popup_type_card-add">
       <div class="popup__form">
-        <button class="popup__close element__close" type="button"></button>
+        <button class="popup__close" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__box" name="editor">
           <fieldset class="popup__profile">
@@ -61,7 +61,7 @@
     </section>
     <section class="popup popup_type_image">
       <div class="popup__image-box">
-        <button class="popup__close image__close" type="button"></button>
+        <button class="popup__close" type="button"></button>
         <img src="#" alt="" class="popup__image">
         <h2 class="popup__text"></h2>
       </div>
@@ -75,6 +75,7 @@
       <button class="element__trash" type="button"></button>
     </article>
   </template>
+  <script src="./page/initial-сards.js"></script>
   <script src="./page/index.js"></script>
 </body>
 
