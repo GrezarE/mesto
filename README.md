@@ -19,4 +19,4 @@
 * JavaScript
 
 #### Ссылка:
-https://grezare.github.io/mesto-project/index.html
+https://grezare.github.io/mesto/
