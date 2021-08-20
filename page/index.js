@@ -101,7 +101,7 @@ function handleProfileSubmit(evt) {
   const jobProfile = document.querySelector('.profile__text');
   titleProfile.textContent = nameInput.value;
   jobProfile.textContent = jobInput.value;
-  openPopup(profilePopup);
+  closePopup(profilePopup);
 }
 
 profilePopup.addEventListener('submit', handleProfileSubmit);
