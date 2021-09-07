@@ -45,8 +45,8 @@ function deleteCard(evt) {
 
 function openCardImage(event) {
   const eventPopupImage = event.target;
-  imagePopupLink.src = eventPopupImage.getAttribute('src');
-  imagePopupLink.alt = eventPopupImage.getAttribute('alt');
+  imagePopupLink.src = eventPopupImage.src;
+  imagePopupLink.alt = eventPopupImage.alt;
   imagePopup.querySelector('.popup__text').textContent = eventPopupImage.getAttribute('alt');
   openPopup(imagePopup);
 };
@@ -59,7 +59,7 @@ function createCard(name, link) {
   cardElement.querySelector('.element__text').textContent = name;
   cardElement.querySelector('.element__hearth').addEventListener('click', changeLikeHearth);
   cardElement.querySelector('.element__trash').addEventListener('click', deleteCard);
-  cardElement.querySelector('.element__image').addEventListener('click', openCardImage);
+  cardElementImage.addEventListener('click', openCardImage);
   return cardElement;
 }
 
