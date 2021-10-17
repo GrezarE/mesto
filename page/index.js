@@ -20,6 +20,22 @@ const imageCloseButton = imagePopup.querySelector('.popup__close');
 const imagePopupLink = imagePopup.querySelector('.popup__image');
 const elementForm = elementPopup.querySelector('.popup__box');
 
+
+//тестирую
+
+function closeOverlay(event) {
+  const popup = document.querySelector('.popup_opened')
+  if (event.target === popup) {
+    popup.classList.remove('popup_opened')
+  }
+}
+
+profilePopup.addEventListener('click', closeOverlay);
+elementPopup.addEventListener('click', closeOverlay);
+imagePopup.addEventListener('click', closeOverlay);
+
+//закончил тест
+
 // Функции открытия и закрытия попапа
 
 function openPopup(popup) {
