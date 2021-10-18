@@ -40,7 +40,9 @@
         <form class="popup__box" name="editor">
           <fieldset class="popup__profile">
             <input type="text" class="popup__item" name="profile" value="" placeholder="Имя профиля">
+            <span class="popup__input-error" id="username-error">Вы пропустили это поле.</span>
             <input type="text" class="popup__item" name="occupation" value="" placeholder="Род занятий">
+            <span class="popup__input-error" id="occupation-error">Вы пропустили это поле.</span>
           </fieldset>
           <button class="popup__button" type="submit">Сохранить</button>
         </form>
@@ -53,7 +55,9 @@
         <form class="popup__box" name="editor">
           <fieldset class="popup__profile">
             <input type="text" class="popup__item" name="place-name" value="" placeholder="Название">
+            <span class="popup__input-error" id="place-name-error">Вы пропустили это поле.</span>
             <input type="text" class="popup__item" name="image-link" value="" placeholder="Ссылка на картинку">
+            <span class="popup__input-error" id="image-link-error">Введите адрес сайта.</span>
           </fieldset>
           <button class="popup__button" type="submit">Создать</button>
         </form>

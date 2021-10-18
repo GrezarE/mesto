@@ -33,7 +33,7 @@ profilePopup.addEventListener("click", closeOverlay);
 elementPopup.addEventListener("click", closeOverlay);
 imagePopup.addEventListener("click", closeOverlay);
 
-function closeEsc (event) {
+function closeEsc(event) {
   const popup = document.querySelector(".popup_opened");
   if (event.key == "Escape") {
     popup.classList.remove("popup_opened");
