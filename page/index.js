@@ -9,8 +9,8 @@ const jobProfile = document.querySelector(".profile__text");
 const nameInput = document.querySelector('input[name="profile"]');
 const jobInput = document.querySelector('input[name="occupation"]');
 const buttonElementAdd = document.querySelector(".profile__button");
-const placeName = document.querySelector('input[name="place-name"]');
-const imageLink = document.querySelector('input[name="image-link"]');
+const placeName = document.querySelector('input[name="place"]');
+const imageLink = document.querySelector('input[name="image"]');
 const profilePopup = document.querySelector(".popup_type_profile");
 const elementPopup = document.querySelector(".popup_type_card-add");
 const imagePopup = document.querySelector(".popup_type_image");
@@ -20,12 +20,12 @@ const imageCloseButton = imagePopup.querySelector(".popup__close");
 const imagePopupLink = imagePopup.querySelector(".popup__image");
 const elementForm = elementPopup.querySelector(".popup__box");
 
-//тестирую
+//оверлей
 
 function closeOverlay(event) {
   const popup = document.querySelector(".popup_opened");
   if (event.target === popup) {
-    popup.classList.remove("popup_opened");
+    closePopup(popup);
   }
 }
 
@@ -33,16 +33,16 @@ profilePopup.addEventListener("click", closeOverlay);
 elementPopup.addEventListener("click", closeOverlay);
 imagePopup.addEventListener("click", closeOverlay);
 
+//ESC
+
 function closeEsc(event) {
   const popup = document.querySelector(".popup_opened");
   if (event.key == "Escape") {
-    popup.classList.remove("popup_opened");
+    closePopup(popup);
   }
 }
 
 document.addEventListener("keydown", closeEsc);
-
-//закончил тест
 
 // Функции открытия и закрытия попапа
 
@@ -153,3 +153,7 @@ elementCloseButton.addEventListener("click", function () {
 imageCloseButton.addEventListener("click", function () {
   closePopup(imagePopup);
 });
+
+//Валидация
+
+
