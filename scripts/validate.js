@@ -32,19 +32,16 @@ const checkInputValidity = (formElement, inputElement) => {
   if (!inputElement.validity.valid) {
     showInputError(formElement, inputElement, inputElement.validationMessage);
   } else {
-    hideInputError(formElement, inputElement)
+    hideInputError(formElement, inputElement);
   }
 };
 
 const toggleButtonState = (inputList, buttonElement) => {
   console.log(hasInvalidInput(inputList));
   if (!hasInvalidInput(inputList)) {
-    // buttonElement.disabled = false
     buttonElement.classList.remove(config.inactiveButtonClass);
   } else {
     buttonElement.classList.add(config.inactiveButtonClass);
-    // buttonElement.disabled = true
-
   }
 };
 
@@ -74,5 +71,3 @@ export const enableValidation = () => {
     setEventListeners(formElement);
   });
 };
-
-// enableValidation();

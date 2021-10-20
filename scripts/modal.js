@@ -1,5 +1,10 @@
 import { openPopup, closePopup, profilePopup, elementPopup } from "./utils.js";
 
+const titleProfile = document.querySelector(".profile__title");
+const jobProfile = document.querySelector(".profile__text");
+const nameInput = document.querySelector('input[name="profile"]');
+const jobInput = document.querySelector('input[name="occupation"]');
+
 export function closeOverlay(event) {
   const popup = document.querySelector(".popup_opened");
   if (event.target === popup) {
@@ -10,6 +15,7 @@ export function closeOverlay(event) {
 export function closeEsc(event) {
   const popup = document.querySelector(".popup_opened");
   if (event.key == "Escape") {
+    console.log("Escape");
     closePopup(popup);
   }
 }
@@ -35,5 +41,6 @@ export function handleProfileSubmit(evt) {
 
 export function openElementPopup() {
   openPopup(elementPopup);
+  const elementForm = elementPopup.querySelector(".popup__box");
   elementForm.reset();
 }
