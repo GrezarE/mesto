@@ -37,7 +37,6 @@ const checkInputValidity = (formElement, inputElement) => {
 };
 
 const toggleButtonState = (inputList, buttonElement) => {
-  console.log(hasInvalidInput(inputList));
   if (!hasInvalidInput(inputList)) {
     buttonElement.classList.remove(config.inactiveButtonClass);
   } else {
@@ -66,7 +65,6 @@ function setEventListeners(formElement) {
 
 export const enableValidation = () => {
   const formList = Array.from(document.querySelectorAll(config.formSelector));
-  console.log(formList);
   formList.forEach((formElement) => {
     setEventListeners(formElement);
   });

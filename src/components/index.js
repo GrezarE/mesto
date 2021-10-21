@@ -1,4 +1,5 @@
 // Экспорт
+import '../page/index.css'
 import { enableValidation } from "./validate.js";
 import { profilePopup, elementPopup, imagePopup, closePopup } from "./utils.js";
 import {
@@ -9,6 +10,7 @@ import {
   openElementPopup,
 } from "./modal.js";
 import { addCard } from "./card.js";
+
 
 // Объявления
 const buttonProfileEdit = document.querySelector(".profile__edit");
