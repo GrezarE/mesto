@@ -1,31 +1,5 @@
 import { openPopup, closePopup, imagePopup, elementPopup } from "./utils.js";
-
-const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
+import { initialCards } from "./initial-сards.js";
 
 const elements = document.querySelector(".elements");
 
@@ -40,41 +14,37 @@ function deleteCard(evt) {
   listItem.remove();
 }
 
-function openCardImage(event) {
-  const eventPopupImage = event.target;
+function openCardImage(data) {
   const imagePopupLink = imagePopup.querySelector(".popup__image");
-  imagePopupLink.src = eventPopupImage.src;
-  imagePopupLink.alt = eventPopupImage.alt;
-  imagePopup.querySelector(".popup__text").textContent =
-    eventPopupImage.getAttribute("alt");
+  imagePopupLink.src = data.link;
+  imagePopupLink.alt = data.name;
+  imagePopup.querySelector(".popup__text").textContent = data.name;
   openPopup(imagePopup);
 }
 
-function createCard(name, link) {
+function createCard(cardData) {
   const elementTemplate = document.querySelector("#element-template").content;
   const cardElement = elementTemplate.querySelector(".element").cloneNode(true);
   const cardElementImage = cardElement.querySelector(".element__image");
-  cardElementImage.src = link;
-  cardElementImage.alt = name;
-  cardElement.querySelector(".element__text").textContent = name;
-  cardElement
-    .querySelector(".element__hearth")
-    .addEventListener("click", changeLikeHearth);
-  cardElement
-    .querySelector(".element__trash")
-    .addEventListener("click", deleteCard);
-  cardElementImage.addEventListener("click", openCardImage);
+  cardElementImage.src = cardData.link;
+  cardElementImage.alt = cardData.name;
+  cardElement.querySelector(".element__text").textContent = cardData.name;
+  cardElement.querySelector(".element__hearth").addEventListener("click", changeLikeHearth);
+  cardElement.querySelector(".element__trash").addEventListener("click", deleteCard);
+  cardElementImage.addEventListener("click", () => openCardImage(cardData));
   return cardElement;
 }
 
 export function addCard(evt) {
   evt.preventDefault();
-  const placeName = document.querySelector('input[name="place"]');
-  const imageLink = document.querySelector('input[name="image"]');
-  elements.prepend(createCard(placeName.value, imageLink.value));
+  const cardData = {
+    link: document.querySelector('input[name="image"]').value,
+    name: document.querySelector('input[name="place"]').value,
+  };
+  elements.prepend(createCard(cardData));
   closePopup(elementPopup);
 }
 
 initialCards.forEach(function (item) {
-  elements.append(createCard(item.name, item.link));
+  elements.append(createCard(item));
 });
