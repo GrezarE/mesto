@@ -14,8 +14,7 @@ export function closeOverlay(event) {
 
 export function closeEsc(event) {
   const popup = document.querySelector(".popup_opened");
-  if (event.key == "Escape") {
-    console.log("Escape");
+  if (event.key === "Escape") {
     closePopup(popup);
   }
 }
@@ -42,5 +41,7 @@ export function handleProfileSubmit(evt) {
 export function openElementPopup() {
   openPopup(elementPopup);
   const elementForm = elementPopup.querySelector(".popup__box");
+  const elementButton = elementForm.querySelector(".popup__button")
   elementForm.reset();
+  elementButton.classList.add("popup__button_disabled")
 }

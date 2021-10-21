@@ -14,4 +14,14 @@ export function closePopup(popup) {
   document.removeEventListener("keydown", closeEsc)
 }
 
-export { profilePopup, elementPopup, imagePopup };
+const config = {
+  formSelector: ".popup__box",
+  inputSelector: ".popup__item",
+  fieldsetSelector: ".popup__profile",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__item_error",
+  errorClass: "popup__input-error_visible",
+};
+
+export { profilePopup, elementPopup, imagePopup, config};
