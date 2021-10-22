@@ -24,4 +24,9 @@ const config = {
   errorClass: "popup__input-error_visible",
 };
 
+export const removeButtonActivity = (button, configData) => {
+  button.disabled = true;
+  button.classList.add(configData.inactiveButtonClass)
+}
+
 export { profilePopup, elementPopup, imagePopup, config};

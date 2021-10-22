@@ -33,7 +33,7 @@ imageCloseButton.addEventListener("click", function () {
   closePopup(imagePopup);
 });
 
-buttonElementAdd.addEventListener("click", openElementPopup);
+buttonElementAdd.addEventListener("click", () => openElementPopup(config));
 
 elementCloseButton.addEventListener("click", function () {
   closePopup(elementPopup);

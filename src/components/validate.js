@@ -1,3 +1,6 @@
+import {removeButtonActivity } from "./utils.js"
+
+
 const showInputError = (
   formElement,
   inputElement,
@@ -39,8 +42,9 @@ const checkInputValidity = (formElement, inputElement, configData) => {
 const toggleButtonState = (inputList, buttonElement, configData) => {
   if (!hasInvalidInput(inputList, configData)) {
     buttonElement.classList.remove(configData.inactiveButtonClass);
+    buttonElement.disabled = false;
   } else {
-    buttonElement.classList.add(configData.inactiveButtonClass);
+    removeButtonActivity(buttonElement, configData)
   }
 };
 
