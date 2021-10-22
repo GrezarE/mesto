@@ -1,4 +1,4 @@
-import { openPopup, closePopup, profilePopup, elementPopup } from "./utils.js";
+import { openPopup, closePopup, profilePopup, elementPopup, removeButtonActivity } from "./utils.js";
 
 const titleProfile = document.querySelector(".profile__title");
 const jobProfile = document.querySelector(".profile__text");
@@ -38,10 +38,10 @@ export function handleProfileSubmit(evt) {
   closePopup(profilePopup);
 }
 
-export function openElementPopup() {
+export function openElementPopup(configData) {
   openPopup(elementPopup);
-  const elementForm = elementPopup.querySelector(".popup__box");
-  const elementButton = elementForm.querySelector(".popup__button")
+  const elementForm = elementPopup.querySelector(configData.formSelector);
+  const elementButton = elementForm.querySelector(configData.submitButtonSelector)
   elementForm.reset();
-  elementButton.classList.add("popup__button_disabled")
+  removeButtonActivity(elementButton, configData)
 }

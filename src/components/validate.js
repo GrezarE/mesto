@@ -1,4 +1,12 @@
-const showInputError = (formElement, inputElement, errorMessage, configData) => {
+import {removeButtonActivity } from "./utils.js"
+
+
+const showInputError = (
+  formElement,
+  inputElement,
+  errorMessage,
+  configData
+) => {
   const errorElement = formElement.querySelector(`#${inputElement.name}-error`);
   inputElement.classList.add(configData.inputErrorClass);
   errorElement.textContent = errorMessage;
@@ -20,7 +28,12 @@ const hasInvalidInput = (inputList) => {
 
 const checkInputValidity = (formElement, inputElement, configData) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage, configData);
+    showInputError(
+      formElement,
+      inputElement,
+      inputElement.validationMessage,
+      configData
+    );
   } else {
     hideInputError(formElement, inputElement, configData);
   }
@@ -29,8 +42,9 @@ const checkInputValidity = (formElement, inputElement, configData) => {
 const toggleButtonState = (inputList, buttonElement, configData) => {
   if (!hasInvalidInput(inputList, configData)) {
     buttonElement.classList.remove(configData.inactiveButtonClass);
+    buttonElement.disabled = false;
   } else {
-    buttonElement.classList.add(configData.inactiveButtonClass);
+    removeButtonActivity(buttonElement, configData)
   }
 };
 
