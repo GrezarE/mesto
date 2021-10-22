@@ -1,10 +1,11 @@
 .element__hearth {
   border: 0;
+  padding: 0;
   width: 22px;
   height: 19px;
   margin-right: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 22px;
+  margin-bottom: 3px;
   justify-self: end;
   background-color: #fff;
   background-image: url(../../../images/hearth-disabled.svg);
