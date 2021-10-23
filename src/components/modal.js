@@ -1,9 +1,11 @@
-import { openPopup, closePopup, profilePopup, elementPopup, removeButtonActivity } from "./utils.js";
+import { openPopup, closePopup, profilePopup, elementPopup, removeButtonActivity, avatarPopup } from "./utils.js";
 
 const titleProfile = document.querySelector(".profile__title");
 const jobProfile = document.querySelector(".profile__text");
+const avatarLink = document.querySelector(".profile__avatar")
 const nameInput = document.querySelector('input[name="profile"]');
 const jobInput = document.querySelector('input[name="occupation"]');
+const avatarInput = document.querySelector('input[name="avatar"]');
 
 export function closeOverlay(event) {
   const popup = document.querySelector(".popup_opened");
@@ -44,4 +46,15 @@ export function openElementPopup(configData) {
   const elementButton = elementForm.querySelector(configData.submitButtonSelector)
   elementForm.reset();
   removeButtonActivity(elementButton, configData)
+}
+
+export function openAvatarPopup() {
+  openPopup(avatarPopup);
+  avatarInput.value = avatarLink.src
+}
+
+export function changeAvatarImage(evt) {
+  evt.preventDefault();
+  avatarLink.src = avatarInput.value
+  closePopup(avatarPopup)
 }

@@ -1,12 +1,14 @@
 const profilePopup = document.querySelector(".popup_type_profile");
 const elementPopup = document.querySelector(".popup_type_card-add");
 const imagePopup = document.querySelector(".popup_type_image");
+const avatarPopup = document.querySelector(".popup_type_avatar")
 
-import { closeEsc } from "./modal.js";
+import { closeEsc, closeOverlay } from "./modal.js";
 
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", closeEsc);
+  popup.addEventListener("click", closeOverlay)
 }
 
 export function closePopup(popup) {
@@ -29,4 +31,4 @@ export const removeButtonActivity = (button, configData) => {
   button.classList.add(configData.inactiveButtonClass)
 }
 
-export { profilePopup, elementPopup, imagePopup, config};
+export { profilePopup, elementPopup, imagePopup, config, avatarPopup};
