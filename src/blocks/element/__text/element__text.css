@@ -9,4 +9,6 @@
   padding-left: 21px;
   padding-top: 25px;
   padding-bottom: 25px;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
