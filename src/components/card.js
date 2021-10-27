@@ -7,10 +7,14 @@ import {
   buttonIsLoading,
   buttonText,
   deletePopup,
+  imagePopupLink,
 } from "./utils.js";
 import { userId } from "./index.js";
 import { cardAddRequest, removeCard, addLike, deleteLike } from "./api.js";
 import { openCardDeletePopup, delTarget } from "./modal.js";
+
+const cardLinkInput = document.querySelector('input[name="image"]');
+const cardNameInput = document.querySelector('input[name="place"]');
 
 function changeLikeHearth(cardData, item) {
   const eventTargetLike = item.querySelector(".element__hearth");
@@ -44,18 +48,17 @@ export function deleteCard(evt) {
       const eventTrash = delTarget.item;
       const listItem = eventTrash.closest(".element");
       listItem.remove();
+      closePopup(deletePopup);
     })
     .catch((err) => {
       console.log(err);
     })
     .finally((res) => {
       buttonIsLoading(false, buttonText.delete, deletePopup);
-      closePopup(deletePopup);
     });
 }
 
 function openCardImage(data) {
-  const imagePopupLink = imagePopup.querySelector(".popup__image");
   imagePopupLink.src = data.link;
   imagePopupLink.alt = data.name;
   imagePopup.querySelector(".popup__text").textContent = data.name;
@@ -96,18 +99,18 @@ export function addCard(evt) {
   evt.preventDefault();
   buttonIsLoading(true, buttonText.create, elementPopup);
   const cardData = {
-    link: document.querySelector('input[name="image"]').value,
-    name: document.querySelector('input[name="place"]').value,
+    link: cardLinkInput.value,
+    name: cardNameInput.value,
   };
   cardAddRequest(cardData)
     .then((post) => {
       elements.prepend(createCard(post, userId));
+      closePopup(elementPopup);
     })
     .catch((err) => {
       console.log(err);
     })
     .finally((res) => {
       buttonIsLoading(false, buttonText.create, elementPopup);
-      closePopup(elementPopup);
     });
 }
