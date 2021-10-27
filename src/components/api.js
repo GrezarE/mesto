@@ -6,25 +6,22 @@ const myAPIConfig = {
   },
 };
 
+function checkResponse(res) {
+  if (res.ok) {
+    return res.json();
+  }
+  return Promise.reject(`Ошибка ${res.status}`);
+}
+
 export const requestCard = () =>
   fetch(`${myAPIConfig.url}/cards`, {
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const userStartData = () =>
   fetch(`${myAPIConfig.url}/users/me`, {
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const cardAddRequest = (obj) =>
   fetch(`${myAPIConfig.url}/cards`, {
@@ -34,12 +31,7 @@ export const cardAddRequest = (obj) =>
       name: obj.name,
       link: obj.link,
     }),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const changeAvatar = (user) =>
   fetch(`${myAPIConfig.url}/users/me/avatar`, {
@@ -48,23 +40,13 @@ export const changeAvatar = (user) =>
     body: JSON.stringify({
       avatar: user.avatar,
     }),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const removeCard = (cardId) =>
   fetch(`${myAPIConfig.url}/cards/${cardId}`, {
     method: "DELETE",
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const userChangeData = (user) =>
   fetch(`${myAPIConfig.url}/users/me`, {
@@ -74,41 +56,21 @@ export const userChangeData = (user) =>
       name: user.name,
       about: user.about,
     }),
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const likeCheck = (cardId) =>
   fetch(`${myAPIConfig.url}/cards/likes/${cardId}`, {
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const addLike = (cardId) =>
   fetch(`${myAPIConfig.url}/cards/likes/${cardId}`, {
     method: "PUT",
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);
 
 export const deleteLike = (cardId) =>
   fetch(`${myAPIConfig.url}/cards/likes/${cardId}`, {
     method: "DELETE",
     headers: myAPIConfig.headers,
-  }).then((res) => {
-    if (res.ok) {
-      return res.json();
-    }
-    return Promise.reject(`Ошибка: ${res.status}`);
-  });
+  }).then(checkResponse);

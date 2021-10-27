@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GrezarE/mesto.git"
+    "url": "git+https://github.com/GrezarE/mesto-project.git"
   },
   "author": "Гречишников-Зарин Евгений",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GrezarE/mesto/issues"
+    "url": "https://github.com/GrezarE/mesto-project/issues"
   },
-  "homepage": "https://github.com/GrezarE/mesto#readme",
+  "homepage": "https://github.com/GrezarE/mesto-project#readme",
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
