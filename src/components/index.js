@@ -40,11 +40,12 @@ const deleteCloseButton = deletePopup.querySelector(".popup__close");
 enableValidation(config);
 
 //Слушатели
+
 imageCloseButton.addEventListener("click", function () {
   closePopup(imagePopup);
 });
 
-avatarEdit.addEventListener("click", openAvatarPopup);
+avatarEdit.addEventListener("click", () => openAvatarPopup(config));
 avatarCloseButton.addEventListener("click", function () {
   closePopup(avatarPopup);
 });
