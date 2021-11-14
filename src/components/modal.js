@@ -59,7 +59,11 @@ export function handleProfileSubmit(evt) {
       closePopup(profilePopup);
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err)
+      // return err
+      // .then((data) => {
+      //   console.log(data.message);
+      // })
     })
     .finally((res) => {
       buttonIsLoading(false, buttonText.save, profilePopup);

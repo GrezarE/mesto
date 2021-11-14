@@ -12,13 +12,12 @@ const profilePopup = document.querySelector(".popup_type_profile");
 const elementPopup = document.querySelector(".popup_type_card-add");
 const imagePopup = document.querySelector(".popup_type_image");
 const avatarPopup = document.querySelector(".popup_type_avatar");
-const deletePopup = document.querySelector(".popup_type_delete")
+const deletePopup = document.querySelector(".popup_type_delete");
 const titleProfile = document.querySelector(".profile__title");
 const jobProfile = document.querySelector(".profile__text");
 const avatarLink = document.querySelector(".profile__avatar");
 const elements = document.querySelector(".elements");
 const imagePopupLink = imagePopup.querySelector(".popup__image");
-
 
 const buttonText = {
   save: {
@@ -47,18 +46,16 @@ export function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener("keydown", closeEsc);
   popup.removeEventListener("click", closeOverlay);
-
 }
 
 export function buttonIsLoading(loading, load, item) {
-  const popupButton = item.querySelector('.popup__button')
+  const popupButton = item.querySelector(".popup__button");
   if (loading) {
     popupButton.textContent = load.buttonLoad;
-    popupButton.disabled = true
+    popupButton.disabled = true;
   } else {
-    popupButton.textContent = load.button
-    popupButton.disabled = false
-
+    popupButton.textContent = load.button;
+    popupButton.disabled = false;
   }
 }
 
@@ -79,5 +76,6 @@ export {
   elements,
   buttonText,
   deletePopup,
-  imagePopupLink
+  imagePopupLink,
 };
+
