@@ -1,6 +1,6 @@
 // Экспорт
 import "../page/index.css";
-import { enableValidation } from "./validate.js";
+import { enableValidation } from "../components/validate.js";
 import {
   profilePopup,
   elementPopup,
@@ -13,7 +13,7 @@ import {
   avatarLink,
   elements,
   deletePopup,
-} from "./utils.js";
+} from "../components/utils.js";
 import {
   openProfilePopup,
   crossProfilePopup,
@@ -21,9 +21,9 @@ import {
   openElementPopup,
   openAvatarPopup,
   changeAvatarImage,
-} from "./modal.js";
-import { addCard, createCard, deleteCard } from "./card.js";
-import { requestCard, userStartData } from "./api.js";
+} from "../components/modal.js";
+import { addCard, createCard, deleteCard } from "../components/card.js";
+import { requestCard, userStartData } from "../components/api.js";
 
 // Объявления
 const buttonProfileEdit = document.querySelector(".profile__edit");

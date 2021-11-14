@@ -9,7 +9,7 @@ import {
   deletePopup,
   imagePopupLink,
 } from "./utils.js";
-import { userId } from "./index.js";
+import { userId } from "../page/index.js";
 import { cardAddRequest, removeCard, addLike, deleteLike } from "./api.js";
 import { openCardDeletePopup, delTarget } from "./modal.js";
 
