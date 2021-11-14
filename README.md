@@ -28,4 +28,5 @@
 
 #### Ссылка:
 https://grezare.github.io/mesto/
+https://grezare.github.io/mesto-project/
 
