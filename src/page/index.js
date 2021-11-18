@@ -23,7 +23,8 @@ import {
   changeAvatarImage,
 } from "../components/modal.js";
 import { addCard, createCard, deleteCard } from "../components/card.js";
-import { requestCard, userStartData } from "../components/api.js";
+import { requestCard, userStartData, api1 } from "../components/api.js";
+import FormValidator from "../components/FormValidator.js";
 
 // Объявления
 const buttonProfileEdit = document.querySelector(".profile__edit");
@@ -37,7 +38,16 @@ const deleteCloseButton = deletePopup.querySelector(".popup__close");
 
 //Валидация
 
-enableValidation(config);
+// enableValidation(config);
+
+const formList = Array.from(document.querySelectorAll(".popup__box"));
+console.log(formList);
+
+formList.forEach((form) => {
+  const validation = new FormValidator(config, form);
+  validation.enableValidation()
+    console.log(validation);
+});
 
 //Слушатели
 
@@ -90,6 +100,16 @@ userStartData()
     console.log(err);
   });
 
-
-  //test
-
+Promise.all([userStartData(), requestCard()])
+  .then((result) => {
+    jobProfile.textContent = result[0].about;
+    titleProfile.textContent = result[0].name;
+    avatarLink.src = result[0].avatar;
+    userId = result[0]._id;
+    result[1].forEach(function (card) {
+      elements.append(createCard(card, userId));
+    });
+  })
+  .catch((err) => {
+    console.log(err);
+  });
